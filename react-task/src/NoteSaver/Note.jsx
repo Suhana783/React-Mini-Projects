@@ -27,29 +27,30 @@ function Text() {
     }
 
     return (
-        <>
-            <h1>Note Taker</h1>
-            <div className="input-section">
-                <textarea
-                    ref={inputRef}
-                    value={current}
-                    onChange={(e) => setCurrent(e.target.value)}
-                    placeholder="Type here..."
-                />
-                <button onClick={AddNotes}>Add Notes</button>
-            </div>
-            
-            <div className="notes-container">
-                {notes.map((note) => (
-                    <div key={note.id} className="note">
-                        <p className="note-time">{note.time}</p>
-                        <p className="note-text">{note.text}</p>
-                        <button className="delete-button" onClick={() => handleDeleteNote(note.id)}>Delete</button>
-                    </div>
-                ))}
-            </div>
-        </>
-    );
+    <div className="main-container">
+        <h1>Note Taker</h1>
+        <div className="input-section">
+            <textarea
+                ref={inputRef}
+                value={current}
+                onChange={(e) => setCurrent(e.target.value)}
+                placeholder="Type here..."
+            />
+            <button onClick={AddNotes}>Add Notes</button>
+        </div>
+        
+        <div className="notes-container">
+            {notes.map((note) => (
+                <div key={note.id} className="note">
+                    <p className="note-time">{note.time}</p>
+                    <p className="note-text">{note.text}</p>
+                    <button className="delete-button" onClick={() => handleDeleteNote(note.id)}>Delete</button>
+                </div>
+            ))}
+        </div>
+    </div>
+);
+
 }
 
 export default Text;
