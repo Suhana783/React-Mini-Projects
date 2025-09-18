@@ -1,0 +1,112 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: none;
+  height: 100px !important; /* This is the key change */
+  overflow: auto !important; /* This is the key change */
+}
+
+button {
+  /* Remove width: 100%; to let it have its natural width */
+  padding: 10px 20px; /* Added horizontal padding to make it look like a button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  align-items: flex-start;
+}
+
+.note {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.note-time {
+  margin: 0;
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.note-text {
+  margin: 0;
+  color: #555;
+  word-wrap: break-word;
+}
+
+.delete-button {
+  margin-top: 10px;
+  background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .input-section, .notes-container {
+    max-width: 100%;
+  }
+  
+  textarea, button, .delete-button {
+    font-size: 14px;
+  }
+}
