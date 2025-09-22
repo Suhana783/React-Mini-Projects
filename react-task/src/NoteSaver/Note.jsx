@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Note.css";
 
-export default function App() {
+export default function Text() {
   const [current, setCurrent] = useState("");
   const inputRef = useRef(null);
   const [notes, setNotes] = useState([]);

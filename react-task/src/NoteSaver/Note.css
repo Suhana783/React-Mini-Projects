@@ -1,4 +1,4 @@
-/* General body and container styling */
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #456882;
@@ -46,7 +46,7 @@ h2 {
   gap: 8px;
 }
 
-/* Input Section */
+
 .input-section {
   background-color: #fafafa;
   padding: 25px;
